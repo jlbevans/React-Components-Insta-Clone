@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Comments from '../Comments/Comments';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
@@ -21,7 +21,7 @@ const Post = props => {
         />
       </div>
       {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection likePost={() => likePost(post.id)} />
+      <LikeSection  likes={props.likes} />
       {/* Comments also wants its props! */}
       <Comments />
     </div>
